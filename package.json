@@ -1,0 +1,28 @@
+{
+  "name": "temporal-examples",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-world Temporal examples, one per topic, each with a time-skipping test",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test --test-concurrency=3 test/*.test.ts",
+    "format": "prettier --write src test"
+  },
+  "dependencies": {
+    "@temporalio/activity": "^1.24.0",
+    "@temporalio/client": "^1.24.0",
+    "@temporalio/common": "^1.24.0",
+    "@temporalio/worker": "^1.24.0",
+    "@temporalio/workflow": "^1.24.0"
+  },
+  "devDependencies": {
+    "@temporalio/testing": "^1.24.0",
+    "@types/node": "^26.6.3",
+    "prettier": "^3.9.9",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "overrides": {
+    "@swc/core": "1.16.2"
+  }
+}
